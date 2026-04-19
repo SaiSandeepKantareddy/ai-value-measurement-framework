@@ -1,0 +1,4 @@
+month,team,workflow,north_star_outcome,metric_name,baseline,target,current_value,status,interpretation,next_action,owner
+2026-04,Support,Tier 1 case handling,Improve resolution efficiency without lowering quality,First-contact resolution,68%,75%,73%,On track,AI drafts are improving agent consistency,Expand to two additional queues,Support Ops Lead
+2026-04,Support,Tier 1 case handling,Improve resolution efficiency without lowering quality,Average handle time,14m,11m,12m,On track,Time per case is falling while CSAT remains stable,Review high-variance case types,Support Ops Lead
+

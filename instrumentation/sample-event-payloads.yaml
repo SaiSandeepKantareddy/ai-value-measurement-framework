@@ -1,0 +1,23 @@
+examples:
+  - event_name: ai_suggestion_generated
+    payload:
+      session_id: sess_1001
+      suggestion_id: sug_2001
+      workflow_name: pull_request_review
+      output_type: code_change
+      generated_at: "2026-04-19T10:15:00Z"
+
+  - event_name: ai_suggestion_accepted
+    payload:
+      session_id: sess_1001
+      suggestion_id: sug_2001
+      accepted_at: "2026-04-19T10:17:00Z"
+      acceptance_mode: partial
+
+  - event_name: human_override_recorded
+    payload:
+      workflow_id: wf_3001
+      reviewer_id: user_88
+      override_type: factual_correction
+      overridden_at: "2026-04-19T10:20:00Z"
+

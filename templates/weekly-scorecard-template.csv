@@ -1,0 +1,5 @@
+team,workflow,metric_category,metric_name,baseline,target,current_value,previous_value,trend,business_interpretation,owner,notes
+Engineering,Pull request workflow,Speed,Median PR cycle time,48h,36h,40h,44h,Improving,Faster reviews are reducing queue time without added defects,Eng Manager,
+Engineering,Pull request workflow,Quality,Escaped defect rate,3.2%,2.5%,2.7%,2.8%,Improving,Quality is stable while delivery speed improves,Eng Manager,
+Engineering,Code assistance workflow,Adoption,% of eligible engineers using AI weekly,20%,60%,52%,47%,Improving,Usage is approaching the adoption threshold needed for broader value,AI Program Lead,
+

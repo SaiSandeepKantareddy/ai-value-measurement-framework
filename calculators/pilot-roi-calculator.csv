@@ -1,0 +1,4 @@
+workflow,team_size,workflow_volume_per_month,baseline_time_per_unit_minutes,assisted_time_per_unit_minutes,hourly_cost,quality_gain_percent,estimated_monthly_hours_saved,estimated_monthly_cost_savings,notes
+PR review workflow,25,320,45,34,85,0,58.67,4986.95,Use observed assisted cycle time not self-reported time saved
+Tier 1 support replies,40,2400,14,11.5,38,2,100.00,3800.00,Pair savings with FCR and policy metrics
+

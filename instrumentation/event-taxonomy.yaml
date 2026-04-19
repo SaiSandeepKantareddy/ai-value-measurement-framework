@@ -1,0 +1,72 @@
+version: 0.1
+description: Starter event taxonomy for measuring AI value across workflows.
+
+events:
+  - name: ai_session_started
+    description: A user begins an AI-assisted workflow session.
+    required_fields:
+      - session_id
+      - user_id
+      - team
+      - workflow_name
+      - tool_name
+      - started_at
+
+  - name: ai_suggestion_generated
+    description: The system generates a suggestion, draft, summary, answer, or action.
+    required_fields:
+      - session_id
+      - suggestion_id
+      - workflow_name
+      - output_type
+      - generated_at
+
+  - name: ai_suggestion_accepted
+    description: A user accepts all or part of an AI-generated output.
+    required_fields:
+      - session_id
+      - suggestion_id
+      - accepted_at
+      - acceptance_mode
+
+  - name: ai_suggestion_rejected
+    description: A user discards the generated output.
+    required_fields:
+      - session_id
+      - suggestion_id
+      - rejected_at
+      - rejection_reason
+
+  - name: human_override_recorded
+    description: A human reviewer changes or overrides the AI-assisted result.
+    required_fields:
+      - workflow_id
+      - reviewer_id
+      - override_type
+      - overridden_at
+
+  - name: workflow_completed
+    description: The workflow reaches a business-relevant completion state.
+    required_fields:
+      - workflow_id
+      - workflow_name
+      - completed_at
+      - outcome_status
+      - cycle_time_seconds
+
+  - name: quality_review_completed
+    description: A manual or automated quality review finishes.
+    required_fields:
+      - workflow_id
+      - review_type
+      - review_result
+      - reviewed_at
+
+  - name: policy_exception_flagged
+    description: A governance, privacy, or compliance exception is detected.
+    required_fields:
+      - workflow_id
+      - exception_type
+      - severity
+      - detected_at
+
