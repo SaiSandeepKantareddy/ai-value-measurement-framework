@@ -1,7 +1,5 @@
 # AI Value Measurement Framework
 
-An open framework for measuring whether AI is creating real business value.
-
 Most companies are measuring AI wrong. They track activity instead of outcomes:
 
 - prompts sent
@@ -10,7 +8,17 @@ Most companies are measuring AI wrong. They track activity instead of outcomes:
 - lines of code
 - hours saved without evidence
 
-This framework helps teams measure AI in a way leaders can trust. It is designed to work across engineering, support, analytics, operations, and internal copilots.
+This framework helps teams measure AI in a way leaders can trust. It is designed for engineering, support, analytics, operations, and internal copilots.
+
+## Why this exists
+
+AI usage is easy to count. AI value is harder to prove.
+
+This repo gives teams a practical way to answer:
+
+- which AI workflows are creating measurable value
+- which ones are creating activity without impact
+- which ones should scale, be fixed, be paused, or be retired
 
 ## What this repo gives you
 
@@ -21,14 +29,6 @@ This framework helps teams measure AI in a way leaders can trust. It is designed
 - governance and executive review templates
 - decision rules for when to scale, fix, pause, or retire workflows
 
-## Who this is for
-
-- CEOs, CIOs, CTOs, and business leaders
-- AI platform and transformation teams
-- engineering, support, analytics, and operations leaders
-- managers running AI pilots in their teams
-- internal tool builders and copilots teams
-
 ## Start in 60 seconds
 
 - If you are a leader: start with [executive/one-page-ai-roi-summary.md](./executive/one-page-ai-roi-summary.md)
@@ -37,11 +37,17 @@ This framework helps teams measure AI in a way leaders can trust. It is designed
 - If you are implementing measurement: start with [instrumentation/measurement-guide.md](./instrumentation/measurement-guide.md)
 - If you want the guided path: start with [start-here/README.md](./start-here/README.md)
 
+## Who this is for
+
+- CEOs, CIOs, CTOs, and business leaders
+- AI platform and transformation teams
+- engineering, support, analytics, and operations leaders
+- managers running AI pilots in their teams
+- internal tool and copilot builders
+
 ## Core idea
 
-AI does not create value because people used it.
-
-AI creates value when it improves:
+AI does not create value because people used it. AI creates value when it improves:
 
 - adoption in the right workflows
 - speed on meaningful work
@@ -80,14 +86,11 @@ The six pillars are:
 - leverage
 - risk and governance
 
-## Framework pillars
+## The six pillars
 
 ### 1. Adoption
 
 Measure whether AI is being used in the workflows where it should matter.
-
-Example metrics:
-
 - weekly active AI users in target roles
 - percent of eligible workflows using AI assistance
 - repeat usage rate after first use
@@ -96,9 +99,6 @@ Example metrics:
 ### 2. Speed
 
 Measure time reduction in meaningful process steps, not vague effort claims.
-
-Example metrics:
-
 - cycle time reduction
 - median time to first draft
 - mean time to resolution
@@ -107,9 +107,6 @@ Example metrics:
 ### 3. Quality
 
 Measure whether outcomes improved, not just whether work happened faster.
-
-Example metrics:
-
 - rework rate
 - defect escape rate
 - first-contact resolution
@@ -119,9 +116,6 @@ Example metrics:
 ### 4. Throughput
 
 Measure whether the team can complete more useful work with the same capacity.
-
-Example metrics:
-
 - tickets resolved per week
 - analyst deliverables completed
 - experiments shipped
@@ -130,9 +124,6 @@ Example metrics:
 ### 5. Leverage
 
 Measure whether teams can take on more scope or complexity without proportional headcount growth.
-
-Example metrics:
-
 - output per team member
 - additional workload absorbed
 - ratio of assisted to unassisted completions
@@ -141,24 +132,20 @@ Example metrics:
 ### 6. Risk and Governance
 
 Measure whether AI usage remains safe, reviewable, and aligned with policy.
-
-Example metrics:
-
 - percent of AI outputs reviewed
 - override rate
 - policy exception count
 - hallucination or factual error rate
 - sensitive-data incident count
 
-## What good measurement looks like
+## Good measurement principles
 
-Strong AI measurement usually has five characteristics:
-
-1. It starts with a workflow, not a model.
-2. It compares against a baseline.
-3. It combines leading and lagging indicators.
-4. It captures both performance and risk.
-5. It includes a business interpretation, not just a number.
+- Start with a workflow, not a model.
+- Compare against a baseline.
+- Combine leading and lagging indicators.
+- Pair speed with quality.
+- Capture risk alongside upside.
+- Add business interpretation, not just metric movement.
 
 ## What not to track
 
@@ -175,6 +162,19 @@ Common anti-patterns:
 - number of models deployed
 
 See [anti-patterns/README.md](./anti-patterns/README.md) for details.
+
+## What is inside
+
+- [start-here](./start-here/README.md): guided entry points by role
+- [executive](./executive): one-page summaries and review questions
+- [playbooks](./playbooks): pilot, rollout, and manager operating guides
+- [templates](./templates): scorecards, metric definitions, and review templates
+- [instrumentation](./instrumentation): event taxonomy and implementation guidance
+- [integrations](./integrations/README.md): common enterprise system mappings
+- [governance](./governance): review cadence, tiering, and metric policy
+- [examples](./examples): function-specific scorecards
+- [decision-rules](./decision-rules/README.md): scale, fix, pause, or retire logic
+- [calculators](./calculators): ROI and prioritization starters
 
 ## Repository structure
 
@@ -196,7 +196,7 @@ ai-value-measurement-framework/
   anti-patterns/
 ```
 
-## How to use this framework
+## How to use it
 
 1. Pick one high-value workflow.
 2. Define the baseline before AI intervention.
@@ -205,41 +205,12 @@ ai-value-measurement-framework/
 5. Review weekly for operational learning and monthly for business impact.
 6. Retire metrics that create bad incentives.
 
-If you want a faster starting point, begin with [start-here/README.md](./start-here/README.md).
-
 ## Starter use cases
 
-### Engineering
-
-- PR cycle time
-- escaped defects
-- review turnaround
-- deployment frequency
-- override rate for AI-generated code suggestions
-
-### Support
-
-- average handle time
-- first-contact resolution
-- escalation rate
-- CSAT movement
-- policy exception rate
-
-### Analytics
-
-- time to insight
-- dashboard turnaround time
-- stakeholder revision count
-- decision adoption rate
-- data-quality review failures
-
-### Operations
-
-- case processing time
-- backlog burn rate
-- exception handling volume
-- accuracy after human review
-- control breach count
+- Engineering: PR cycle time, escaped defects, review turnaround, deployment frequency
+- Support: handle time, first-contact resolution, escalation rate, policy exception rate
+- Analytics: time to insight, dashboard turnaround, revision count, decision adoption
+- Operations: case processing time, backlog burn rate, exception handling, control breaches
 
 ## Design principles
 
@@ -251,7 +222,7 @@ If you want a faster starting point, begin with [start-here/README.md](./start-h
 
 ## Contributing
 
-Contributions are welcome in four forms:
+Contributions are most useful when they add:
 
 - new metric definitions
 - example scorecards for additional functions
@@ -274,7 +245,5 @@ This repository is designed to be reusable because it includes:
 - a shared instrumentation model
 - governance and executive reporting layers
 - role-based and maturity-based adoption paths
-
-## Launch tagline
 
 Measure AI like a business system, not a novelty.
