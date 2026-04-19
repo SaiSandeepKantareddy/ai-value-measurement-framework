@@ -56,6 +56,30 @@ The framework is reusable across companies because the KPI categories stay mostl
 - which systems contain the source data
 - what outcomes the business cares about
 
+## Framework flow
+
+```mermaid
+flowchart LR
+    A[Pick A Workflow] --> B[Define Baseline]
+    B --> C[Instrument Events]
+    C --> D[Measure Six Pillars]
+    D --> E[Interpret Business Impact]
+    E --> F{Decision}
+    F -->|Scale| G[Expand To More Teams]
+    F -->|Fix| H[Improve Workflow Or Guardrails]
+    F -->|Pause| I[Stop Expansion]
+    F -->|Retire| J[End Low-Value Pilot]
+```
+
+The six pillars are:
+
+- adoption
+- speed
+- quality
+- throughput
+- leverage
+- risk and governance
+
 ## Framework pillars
 
 ### 1. Adoption
@@ -250,3 +274,7 @@ This repository is designed to be reusable because it includes:
 - a shared instrumentation model
 - governance and executive reporting layers
 - role-based and maturity-based adoption paths
+
+## Launch tagline
+
+Measure AI like a business system, not a novelty.
